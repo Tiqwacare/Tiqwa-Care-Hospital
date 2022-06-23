@@ -29,6 +29,36 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+   
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function() {
+            $("#btn_submit").click(function() {
+                var formData = {
+                    fullname: $("#fullname").val(),
+                    departments: $("#departments").val(),
+                    email: $("#email").val(),
+                    mobilenumber: $("#mobilenumber").val(),
+                    location: $("#location").val(),
+                    date: $("#date").val(),
+                    message: $("#message").val()
+                }
+                $.ajax({
+                    contentType: 'application/json',
+                    type: "POST",
+                    url: "https://prod-147.westeurope.logic.azure.com:443/workflows/35e061310f26455caa14ac4e7391dd03/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=DbLexd7HslW9BZhLP_LsFlrZzXdVKF7GGy_GgZx3bCc",
+                    data: JSON.stringify(formData),
+                    success: function() {
+                        $("#postResult").val("Success");
+                    },
+                    error: function() {
+                        $("#postResult").val("Failed");
+                    }
+                });
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -59,35 +89,12 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li class="dropdown"><a class="nav-link scrollto" href="#services">Services</a>  
-                        <ul class="nav nav-tabs flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Surgery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Physiotherapy</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Paediatrics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Dentistry</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Ophthalmology</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
                     <li><a class="nav-link scrollto" href="#gallery">Media</a></li>
                     <!-- <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li> -->
+                
 
-
-
-
-                    <!-- <li class="dropdown"><a class="nav-link scrollto" href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -104,17 +111,13 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> -->
-
-
-
-
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <!-- .navbar -->
 
-            <a href="appointment.html" class="appointment-btn scrollto"> Make an Appointment </a>
+            <a href="appointment.html" class="appointment-btn scrollto"> Appointment </a>
 
         </div>
     </header>
@@ -124,7 +127,7 @@
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
             <h1>Welcome to Tiqwa Care</h1>
-            <h2>Our Mission is Health, Our Speciality is You!</h2>
+            <h2>The Heart is where the Health is.....</h2>
         </div>
     </section>
     <!-- End Hero -->
@@ -201,28 +204,30 @@
 
                     <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                         <h3>ABOUT US</h3>
-                        <p>Tiqwa Care Hospital has been serving Lagos and its environment since 1995. We were founded with patient care in mind, and are committed to treating all patients in need. Our highly skilled medical professionals take great pride
-                            in providing our community with quality care that’s patient-centered.</p>
+                        <p>Tiqwa Care Hospital has been serving Lagos and its environment since 1995. We were founded with patient care in mind, and are committed to treating all patients in need. 
+                            Our highly skilled medical professionals take great pride in providing our community with quality care that’s patient-centered.</p>
 
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-fingerprint"></i></div>
                             <h4 class="title"><a href="">Our Mission</a></h4>
-                            <p class="description">We promise to put your needs first and foremost during your treatment and will pursue every available means to get you better. Every professional of our dedicated team will contribute towards delivering the best outcomes and
-                                highest quality of service. You can count on us to keep you and your loved ones safe and healthy.
+                            <p class="description">We promise to put your needs first and foremost during your treatment and will pursue every available means to get you better. 
+                                Every professional of our dedicated team will contribute towards delivering the best outcomes and highest quality of service. 
+                                You can count on us to keep you and your loved ones safe and healthy.
                             </p>
                         </div>
 
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-gift"></i></div>
                             <h4 class="title"><a href="">Our Vision</a></h4>
-                            <p class="description">To inspire hope, and contribute to health and well-being by providing the best care to every patient hrough integrated clinical practice, education and research</p>
+                            <p class="description">To inspire hope, and contribute to health and well-being by providing the best care to every patient 
+                                hrough integrated clinical practice, education and research</p>
                         </div>
 
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-atom"></i></div>
                             <h4 class="title"><a href="">Our Achievement</a></h4>
-                            <p class="description">In recognition of our efforts to constantly improve our standards, Tiqwa Care Hospital was voted by public as a Winner of Safe and Clean Private Hospital in Nigeria. This prestigious reward was presented at the 4th Nigerian
-                                Risk Award Summit in 2019.</p>
+                            <p class="description">In recognition of our efforts to constantly improve our standards, Tiqwa Care Hospital was voted by public as a Winner of Safe and Clean Private Hospital in Nigeria. 
+                                This prestigious reward was presented at the 4th Nigerian Risk Award Summit in 2019.</p>
                         </div>
 
                     </div>
@@ -233,11 +238,10 @@
         <!-- End About Section -->
 
         <!-- ======= Counts Section ======= -->
-
+        
         <!-- End Counts Section -->
 
-
-        <!-- ======= Departments Section ======= -->
+        <!-- ======= Services Section ======= -->
         <section id="services" class="services">
             <div class="container">
 
@@ -247,117 +251,61 @@
                         quidem hic quas.</p>
                 </div>
 
-                <div class="row gy-4">
-                    <div class="col-lg-3">
-                        <ul class="nav nav-tabs flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Surgery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Physiotherapy</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Paediatrics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Dentistry</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Ophthalmology</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="tab-content">
-                            <div class="tab-pane active show" id="tab-1">
-                                <div class="row gy-4">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>Cardiology</h3>
-                                        <p class="fst-italic">Your whole body depends on your heart health. The Centers for Disease Control and Prevention (CDC) report that heart disease is the top cause of death for American adults. The good news is that there is much you
-                                            can do to keep your heart healthy. We provide patients with comprehensive services for the treatment of cardiovascular disease. At Valley Hospital, advanced technology and medical expertise come together in
-                                            one convenient location.</p>
-                                    </div>
-                                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="assets/img/departments-1.jpg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab-2">
-                                <div class="row gy-4">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>Surgery</h3>
-                                        <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-                                        <p>Provide operative procedures (surgeries) for the correction of deformities and defects, repair of injuries, and diagnosis and cure of certain diseases.</p>
-                                    </div>
-                                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="assets/img/departments-2.jpg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab-3">
-                                <div class="row gy-4">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>Physiotherapy</h3>
-                                        <p class="fst-italic">Physiotherapists study the science of movement. They learn how to pinpoint an injury’s root causes.</p>
-                                        <p>Physiotherapy is treatment to restore, maintain, and make the most of a patient’s mobility, function, and well-being. Physiotherapy helps through physical rehabilitation, injury prevention, and health and fitness.
-                                            Physiotherapists get you involved in your own recovery.</p>
-                                    </div>
-                                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="assets/img/physio.jpeg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab-4">
-                                <div class="row gy-4">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>Paediatrics</h3>
-                                        <p class="fst-italic">Pediatrics is the branch of medicine that involves the medical care of infants, children, and adolescents.</p>
-                                        <p>Paediatrics is the medical specialty focused on infants, children, and adolescents. Tiqwa Care team of doctors are all working together to address your concerns as a parent to provide exceptional paediatric health
-                                            and wellness care. Our goal is to deliver the care and treatment your child needs to get back to good health. </p>
-                                    </div>
-                                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="assets/img/paediatrics.jpeg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab-5">
-                                <div class="row gy-4">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>Dentistry</h3>
-                                        <p class="fst-italic">We render Services to prevent complications such as tooth decay (cavities) and gum disease and to maintain the overall health of your mouth.</p>
-                                        <p>Dentistry is essentially a primary care discipline insofar as the vast majority of patient care takes place in community settings, is restricted to simple procedures and is provided by 'generalists' who in the main
-                                            hold, or aspire to hold, a long-term relationship with their patients</p>
-
-                                    </div>
-                                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="assets/img/dentistry.jpeg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane" id="tab-6">
-                                <div class="row gy-4">
-                                    <div class="col-lg-8 details order-2 order-lg-1">
-                                        <h3>Ophthalmology</h3>
-                                        <p class="fst-italic">branch of medicine that deals with the diagnosis and treatment of eye disorders</p>
-                                        <p>Optometrists are eye care professionals who provide primary vision care ranging from sight testing and correction to the diagnosis, treatment and management of vision changes.</p>
-
-                                    </div>
-                                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                                        <img src="assets/img/opthalmology.jpeg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="icon-box">
+                            <!-- <div class="icon"><i class="fas fa-heartbeat"></i></div> -->
+                            <div class="icon"><i class="bx bxl-heartbeat"></i></div>
+                            <h4><a href="">Lorem Ipsum</a></h4>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
                         </div>
                     </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-pills"></i></div>
+                            <h4><a href="">Sed ut perspiciatis</a></h4>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-hospital-user"></i></div>
+                            <h4><a href="">Magni Dolores</a></h4>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-dna"></i></div>
+                            <h4><a href="">Nemo Enim</a></h4>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-wheelchair"></i></div>
+                            <h4><a href="">Dele cardo</a></h4>
+                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-notes-medical"></i></div>
+                            <h4><a href="">Divera don</a></h4>
+                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
         </section>
-        <!-- End Departments Section -->
+        <!-- End Services Section -->
 
         <!-- ======= Appointment Section ======= -->
         <section id="appointment" class="appointment section-bg">
@@ -416,8 +364,8 @@
                             </select>
                             <div class="validate"></div>
                         </div>
-                    </div>
-
+                    </div> 
+                    
                     <div class="row">
                         <div class="col-md-4 form-group mt-3 mt-md-0">
                             <label for="department">Unit</label>
@@ -455,6 +403,110 @@
         </section>
         <!-- End Appointment Section -->
 
+        <!-- ======= Departments Section ======= -->
+        <section id="departments" class="departments">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Departments</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
+                        quidem hic quas.</p>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-3">
+                        <ul class="nav nav-tabs flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Neurology</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Hepatology</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Eye Care</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="tab-1">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Cardiology</h3>
+                                        <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                                        <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem
+                                            quaerat quos qui similique accusamus nostrum rem vero</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/departments-1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-2">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Et blanditiis nemo veritatis excepturi</h3>
+                                        <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                                        <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode
+                                            pakto madirna desera vafle de nideran pal</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/departments-2.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-3">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
+                                        <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                                        <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit
+                                            ullam. Soluta et harum voluptatem optio quae</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/departments-3.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-4">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                                        <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
+                                        <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis
+                                            aperiam quia a laborum inventore</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/departments-4.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-5">
+                                <div class="row gy-4">
+                                    <div class="col-lg-8 details order-2 order-lg-1">
+                                        <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                                        <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                                        <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                                    </div>
+                                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                                        <img src="assets/img/departments-5.jpg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Departments Section -->
+
         <!-- ======= Doctors Section ======= -->
         <section id="doctors" class="doctors">
             <div class="container">
@@ -469,11 +521,11 @@
 
                     <div class="col-lg-6">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="assets/img/doc 10.jpeg" class="img-fluid" alt=""></div>
+                            <div class="pic"><img src="assets/img/doctors/singledoctor2.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Yusuf Buhari</h4>
+                                <h4>Walter White</h4>
                                 <span>Chief Medical Officer</span>
-                                <p>Consultant-MB BS (Cambridge), PhD (Cambridge), Advanced Cardiac Imaging Fellowship (UK)</p>
+                                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                                 <div class="social">
                                     <a href=""><i class="bx bxl-twitter"></i></a>
                                     <a href=""><i class="bx bxl-facebook"></i></a>
@@ -486,11 +538,11 @@
 
                     <div class="col-lg-6 mt-4 mt-lg-0">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="assets/img/doc 6.jpeg" class="img-fluid" alt=""></div>
+                            <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>James Fadeyi</h4>
+                                <h4>Sarah Jhonson</h4>
                                 <span>Anesthesiologist</span>
-                                <p>B.Sc. (Hons) MBBS, FRCAI, AFICM</p>
+                                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                                 <div class="social">
                                     <a href=""><i class="bx bxl-twitter"></i></a>
                                     <a href=""><i class="bx bxl-facebook"></i></a>
@@ -503,11 +555,11 @@
 
                     <div class="col-lg-6 mt-4">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="assets/img/Doc 7.jpeg" class="img-fluid" alt=""></div>
+                            <div class="pic"><img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Sheriff Busari</h4>
-                                <span>Cardiologist</span>
-                                <p>BSc (Hons), Ph.D., MBBS, MRCP (London)</p>
+                                <h4>William Anderson</h4>
+                                <span>Cardiology</span>
+                                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                                 <div class="social">
                                     <a href=""><i class="bx bxl-twitter"></i></a>
                                     <a href=""><i class="bx bxl-facebook"></i></a>
@@ -520,11 +572,11 @@
 
                     <div class="col-lg-6 mt-4">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="assets/img/singledoctor4.jpg" class="img-fluid" alt=""></div>
+                            <div class="pic"><img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Oluwatosin Oluokun</h4>
+                                <h4>Amanda Jepson</h4>
                                 <span>Neurosurgeon</span>
-                                <p>M.D., Ph.D., FRCS(C)</p>
+                                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                                 <div class="social">
                                     <a href=""><i class="bx bxl-twitter"></i></a>
                                     <a href=""><i class="bx bxl-facebook"></i></a>
@@ -556,8 +608,10 @@
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">How can I avoid infections? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                                 <p>
-                                    While at Tiqwa Health hospital, all the usual rules about personal hygiene apply, and then some. Frequent hand washing and dressing changes are important. Urinary catheter drainage bags should be kept below hip level. Also, if you have relatives who aren’t
-                                    feeling well, discourage them from visiting you until they are over their illness. If you see a treatment team member or family member not following good hygiene guidelines, please speak up.
+                                    While at Tiqwa Health hospital, all the usual rules about personal hygiene apply, and then some. 
+                                    Frequent hand washing and dressing changes are important. Urinary catheter drainage bags should be kept below hip level. 
+                                    Also, if you have relatives who aren’t feeling well, discourage them from visiting you until they are over their illness. 
+                                    If you see a treatment team member or family member not following good hygiene guidelines, please speak up. 
                                 </p>
                             </div>
                         </li>
@@ -566,8 +620,9 @@
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How can I keep track of my medications? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                                 <p>
-                                    Drug names can be long and difficult to pronounce, but the good news is that you don’t have to be a pharmacist to accurately keep track of your medications. Keep an updated list of your prescriptions, with dosages, frequencies, side effects, and your
-                                    reasons for taking them. Carry the list with you, especially when seeing a doctor or another medical provider.
+                                    Drug names can be long and difficult to pronounce, but the good news is that you don’t have to be a pharmacist to accurately keep track of your medications. 
+                                    Keep an updated list of your prescriptions, with dosages, frequencies, side effects, and your reasons for taking them. 
+                                    Carry the list with you, especially when seeing a doctor or another medical provider. 
                                 </p>
                             </div>
                         </li>
@@ -576,7 +631,8 @@
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Why are some Patients in Isolation? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                                 <p>
-                                    Patients are isolated to prevent the spread of disease to other people in the medical environment. Isolated persons are typically either highly contagious or infected by a treatment-resistant organism. Isolated person may also be those who are immunosuppressed.
+                                    Patients are isolated to prevent the spread of disease to other people in the medical environment. Isolated persons are typically either highly 
+                                    contagious or infected by a treatment-resistant organism. Isolated person may also be those who are immunosuppressed.
                                 </p>
                             </div>
                         </li>
@@ -585,7 +641,8 @@
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What Happens If I am Admitted? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                                 <p>
-                                    Upon admission to the hospital, you will remain in the Emergency Department until your inpatient room is ready. Your admitting physician will visit you during their designated "patient rounds.
+                                    Upon admission to the hospital, you will remain in the Emergency Department until your inpatient room is ready. 
+                                    Your admitting physician will visit you during their designated "patient rounds.
                                 </p>
                             </div>
                         </li>
@@ -610,23 +667,18 @@
         <section id="testimonials" class="testimonials">
             <div class="container">
 
-                <div class="section-title">
-                    <h2>Our Patients Say it Best</h2>
-                    <p> Read Feedback from some of our Patients</p>
-                </div>
-
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper">
 
                         <div class="swiper-slide">
                             <div class="testimonial-wrap">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/feedback/Azeez.jpg" class="testimonial-img" alt="">
-                                    <h3>Fijabi</h3>
+                                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                                    <h3>Saul Goodman</h3>
                                     <h4>Ceo &amp; Founder</h4>
                                     <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> The services that I receive from Tiqwa Care Hospital is excellent. The doctors and other members of the staff are friendly and ensure that I am properly informed
-                                        about my health and care. I would have no problem in recommending them to family and friends.
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> The services that I receive from Tiqwa Care Hospital is excellent. 
+                                        The doctors and other members of the staff are friendly and ensure that I am properly informed about my health and care. I would have no problem in recommending them to family and friends.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -637,12 +689,12 @@
                         <div class="swiper-slide">
                             <div class="testimonial-wrap">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/feedback/idris.jpg" class="testimonial-img" alt="">
-                                    <h3>Shafau Idris</h3>
+                                    <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                                    <h3>Sara Wilsson</h3>
                                     <h4>Designer</h4>
                                     <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>Wonderful experience with Tiqwa Care Hospital. They have wonderful surgeon, and the staff was always helpful and kind. They ensured I had a smooth prep, surgery,
-                                        and follow-up. I am so glad I chose Tiqwa Care Hospital and would highly recommend to anyone.
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>Wonderful experience with Tiqwa Care Hospital. They have wonderful surgeon, and the staff was always helpful and kind.
+                                         They ensured I had a smooth prep, surgery, and follow-up. I am so glad I chose Tiqwa Care Hospital and would highly recommend to anyone.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -653,12 +705,13 @@
                         <div class="swiper-slide">
                             <div class="testimonial-wrap">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/feedback/Femi.jpg" class="testimonial-img" alt="">
-                                    <h3>Abiodun Amos</h3>
+                                    <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                                    <h3>Jena Karlis</h3>
                                     <h4>Store Owner</h4>
                                     <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>Great experience as a first timer. I barely waited to be helped when I checked in. The staff and doctors were all very friendly and helpful. I especially loved
-                                        how the doctor really took his time to explain my conditions with me as well as my treatment options. I had a great visit and the doctor’s demeanor has really put me at ease. So I highly recommend this Hospital.
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>Great experience as a first timer. I barely waited to be helped when I checked in. The staff and doctors were all very friendly and helpful. 
+                                        I especially loved how the doctor really took his time to explain my conditions with me as well as my treatment options. 
+                                        I had a great visit and the doctor’s demeanor has really put me at ease. So I highly recommend this Hospital.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -669,12 +722,12 @@
                         <div class="swiper-slide">
                             <div class="testimonial-wrap">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/feedback/joshua2.jpg" class="testimonial-img" alt="">
-                                    <h3>Joshua Anthony</h3>
+                                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                                    <h3>Matt Brandon</h3>
                                     <h4>Freelancer</h4>
                                     <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> Tiqwa Care is a very great hospital. Doctors combines expertise and willingness to listen and discuss. They also have excellent surgeons. Also, the staffs are
-                                        very friendly and professional. I’ve never had to wait more than a few minutes when I arrive on time for an appointment.
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> Tiqwa Care is a very great hospital. Doctors combines expertise and willingness to listen and discuss. 
+                                        They also have excellent surgeons. Also, the staffs are very friendly and professional. I’ve never had to wait more than a few minutes when I arrive on time for an appointment.
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -685,8 +738,8 @@
                         <div class="swiper-slide">
                             <div class="testimonial-wrap">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/feedback/1.jpeg" class="testimonial-img" alt="">
-                                    <h3>Florence</h3>
+                                    <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                                    <h3>Matt Brandon</h3>
                                     <h4>Freelancer</h4>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i> This was the best care I have ever had in a hospital. Thank you and God bless👍🙏
@@ -700,12 +753,12 @@
                         <div class="swiper-slide">
                             <div class="testimonial-wrap">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/feedback/3.jpeg" class="testimonial-img" alt="">
-                                    <h3>Sharon Oshoala</h3>
+                                    <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                                    <h3>John Larson</h3>
                                     <h4>Entrepreneur</h4>
                                     <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>Doctor that attended to me is incredible. Not only has she taken great care of my health, but she is also lovely to speak with at every appointment. It’s rare
-                                        to find a doctor that combines such personal touches and care for a patient as a person with outstanding quality of medical care. I highly recommend Tiqwa Care Hospital for they have the best Doctors and Staffs!
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>Doctor that attended to me is incredible. Not only has she taken great care of my health, but she is also lovely to speak with at every appointment.
+                                        It’s rare to find a doctor that combines such personal touches and care for a patient as a person with outstanding quality of medical care. I highly recommend Tiqwa Care Hospital for they have the best Doctors and Staffs!
                                         <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -817,8 +870,7 @@
             </div>
 
             <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3964.065510751154!2d3.3751999!3d6.5133926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c5825e0cae5%3A0x335eb0de32ede372!2s9%20Ibikunle%20St%2C%20Yaba%20101245%2C%20Lagos!5e0!3m2!1sen!2sng!4v1655650297513!5m2!1sen!2sng"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3964.065510751154!2d3.3751999!3d6.5133926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c5825e0cae5%3A0x335eb0de32ede372!2s9%20Ibikunle%20St%2C%20Yaba%20101245%2C%20Lagos!5e0!3m2!1sen!2sng!4v1655650297513!5m2!1sen!2sng" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="container">
@@ -904,39 +956,30 @@
                         <h4>Useful Links</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#services">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#gallery">Media</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#department">Department</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Cardiology</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Clinical Radiology</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Optometry</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Paedatry</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Dentistry</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Engage With us on Our Social Media Handles</h4>
-
-                        <div class="social-links text-center text-md-center pt-3 pt-md-0">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                        </div>
-
-                        <!-- <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p> -->
-                        <!-- <form action="" method="post">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
                             <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form> -->
+                        </form>
                     </div>
 
                 </div>
@@ -949,18 +992,17 @@
                 <div class="copyright">
                     &copy; Copyright <strong><span>Olucrespo Services Limited</span></strong>. All Rights Reserved
                 </div>
-                <div class="credits">
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <div class="credits">                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
                     Designed by <a href="">Olucrespo</a>
                 </div>
             </div>
-            <!-- <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
                 <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div> -->
+            </div>
         </div>
     </footer>
     <!-- End Footer -->
@@ -983,7 +1025,7 @@
     <script>
         var date = new Date();
         var tdate = date.getDate();
-        if (tdate < 10) {
+        if(tdate < 10) {
             tdate = '0' + tdate;
         }
         var month = date.getMonth() + 1;
@@ -993,11 +1035,8 @@
         var year = date.getFullYear();
         var minDate = year + '-' + month + '-' + tdate;
         document.getElementById('appointmentdate').setAttribute('min', minDate)
-        document.getElementById('appointmentdate').value = minDate
-    </script>
-
-    <!-- Script for the success page -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        document.getElementById('appointmentdate').value= minDate
+    </script>  
 
 </body>
 

@@ -51,7 +51,7 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center">
+        <div class="container d-flex align-items-center">            
             <a href="index.html" class="logo me-auto"><img src="assets/img/tiqwa.png" alt="" class="img-fluid"></a>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
@@ -59,14 +59,33 @@
                     <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
                     <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
                     <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="index.html#gallery">Media</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#departments">Departments</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#doctors">Doctors</a></li>
+
+                    <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
                     <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <!-- .navbar -->
 
-            <a href="appointment.html" class="appointment-btn scrollto"> Make an Appointment</a>
+            <a href="appointment.html" class="appointment-btn scrollto"> Appointment</a>
 
         </div>
     </header>
@@ -76,57 +95,57 @@
     <section id="herohero" class="d-flex align-items-center">
         <div class="container">
             <h1>Make an Appointment</h1>
-            <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem
-                hic quas.</p> -->
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi
+                quidem hic quas.</p>
         </div>
     </section>
     <!-- End Herohero -->
 
-
+   
     <!-- ======= Appointment Section ======= -->
-    <section id="appointment" class="appointment section-bg">
-        <div class="container">
-            <form action="appointment.html" method="post" role="form" class="php-email-form">
-                <div class="row">
-                    <div class="col-md-4 form-group">
-                        <label for="name">Fullname</label>
-                        <input type="text" name="name" class="form-control" id="fullname" placeholder="Surname First" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
-                        <div class="validate"></div>
+        <section id="appointment" class="appointment section-bg">
+            <div class="container">
+                <form action="appointment.html" method="post" role="form" class="php-email-form">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <label for="name">Fullname</label>
+                            <input type="text" name="name" class="form-control" id="fullname" placeholder="Surname First" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+                            <div class="validate"></div>
+                        </div>
+
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" data-rule="email" data-msg="Please enter a valid email" required>
+                            <div class="validate"></div>
+                        </div>
+
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" name="phone" id="phone" data-rule="" placeholder="Phone Number" data-rule="minlen:10" data-msg="Please enter at least 10 chars" required>
+                            <div class="validate"></div>
+                        </div>
                     </div>
 
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <label for="email">E-mail</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" data-rule="email" data-msg="Please enter a valid email" required>
-                        <div class="validate"></div>
-                    </div>
-
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number"  required>
-                        <div class="validate"></div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <label for="gender">Gender</label>
-                        <select name="gender" id="gender" class="form-select" required>
+                    <div class="row">
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <label for="gender">Gender</label>
+                            <select name="gender" id="gender" class="form-select">
                               <option value="">Select Gender</option>
                               <option value="Female">Male</option>
                               <option value="Male">Female</option>
                             </select>
-                        <div class="validate"></div>
-                    </div>
+                            <div class="validate"></div>
+                        </div>
 
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" name="dob" class="form-control datepicker" id="dob" placeholder="Date of Birth" data-rule="minlen:6" data-msg="Please pick a date from calendar" required>
-                        <div class="validate"></div>
-                    </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" name="dob" class="form-control datepicker" id="dob" placeholder="Date of Birth" data-rule="minlen:4" data-msg="Please pick a date from calendar" required>
+                            <div class="validate"></div>
+                        </div>
 
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <label for="location">Location</label>
-                        <select name="location" id="location" class="form-select" required>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <label for="location">Location</label>
+                            <select name="location" id="location" class="form-select" required>
                               <option value="">Select Location</option>
                               <option value="Agege">Agege</option>
                               <option value="Alimosho">Alimosho</option>
@@ -149,136 +168,150 @@
                               <option value="Ibeju-Lekki">Ibeju-Lekki</option>
                               <option value="Epe">Epe</option>
                             </select>
-                        <div class="validate"></div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <label for="department">Unit</label>
-                        <select name="department" id="unit" placeholder="Select(Optional)" class="form-select" required>
-                              <option value="">Select (Option)</option>
-                              
-                              <!-- <option value="Cardiologist">Cardiology</option> -->
-                              <option value="Dentistry">Dentistry</option>
-                              <option value="Gynaecology">Gynaecology</option>
-                              <option value="Ophthalmology">Ophthalmology</option>
-                              <option value="Paediatry">Paediatry</option>
-                              <option value="Physiotheraphy">Physiotheraphy</option>
-                              <!-- <option value="Surgeon">Surgery</option> -->
+                            <div class="validate"></div>
+                        </div>
+                    </div> 
+                    
+                    <div class="row">
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <label for="department">Unit</label>
+                            <select name="department" id="unit" class="form-select" required>
+                              <option value="">Select Department</option>
                               <option value="Doctor">Choose for me</option>
+                              <option value="Cardiologist">Cardiology</option>
+                              <option value="Radiologist">Clinical Radiology</option>
+                              <option value="Dentist">Dentistry</option>
+                              <option value="Gynaecologist">Gynaecology</option>
+                              <option value="Ophthalmologist">Ophthalmology</option>
+                              <option value="Optometrist">Optometry</option>
+                              <option value="Paediatrician">Paediatry</option>
+                              <option value="Pathologist">Pathology</option>
+                              <option value="Physiotherapist">Physiotheraphy</option>
+                              <option value="Psychiatrist">Psychiatry</option>
+                              <option value="Surgeon">Surgery</option>
                             </select>
+                            <div class="validate"></div>
+                        </div>
+
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <label for="appointment">Appointment Date </label>
+                            <input type="date" name="appointmentdate" class="form-control datepicker" id="appointmentdate" placeholder="Appointment Date" data-rule="minlen:4" min="" data-msg="Please pick a date from calendar" required>
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mt-3">
+                        <label for="symptoms">Symptom Description</label>
+                        <textarea class="form-control" name="message" id="message" rows="5" placeholder="Further Description of the symptoms (Optional)" required></textarea>
                         <div class="validate"></div>
                     </div>
 
-                    <div class="col-md-4 form-group mt-3 mt-md-0">
-                        <label for="appointment">Appointment Date </label>
-                        <input type="date" name="appointmentdate" class="form-control datepicker" id="appointmentdate" data-rule="minlen:4" min="" data-msg="Please pick a date from calendar" required>
-                        <div class="validate"></div>
+                    <div class="text-center"><button  id="btn_submit" type="submit" onclick="openPopup">Make an Appointment</button></div>
+
+                    <!-- <div class="text-center">
+                        <button type="submit" class="btn" onclick="openPopup">
+                            Submit
+                        </button>
+                    </div> -->
+
+                    <!-- <div class="popup">
+                        <img src="/Medilab/assets/img/404-tick.png">
+                        <h2>Thanks you!</h2>
+                        <p>Your appointment request has been sent successfully.  </p>
                     </div>
-                </div>
+                    <button type="button" onclick="closePopup">OK</button>
+ -->
 
+                    <!-- <div class="mb-3" id="postResult" type="text" value="Empty" >
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+                    </div>  -->
 
-                <div class="form-group mt-3">
-                    <label for="symptoms">Symptom Description</label>
-                    <textarea class="form-control" name="message" id="message" rows="5" placeholder="Further Description of the symptoms (Optional)"></textarea>
-                    <div class="validate"></div>
-                </div>
-                </br>
-                <!-- <div class="mb-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-                </div> -->
-                <!-- <div class="text-center"><button id="btn_submit" type="submit" onclick="openPopup">Make an Appointment</button></div> -->
-                <div class="text-center"><button id="btn_submit" type="submit">Make an Appointment</button></div>
+                </form>
 
-
-            </form>
-
-        </div>
-    </section>
-    <!-- End Appointment Section -->
-
-    <!-- Map -->
-    <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3964.065510751154!2d3.3751999!3d6.5133926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c5825e0cae5%3A0x335eb0de32ede372!2s9%20Ibikunle%20St%2C%20Yaba%20101245%2C%20Lagos!5e0!3m2!1sen!2sng!4v1655650297513!5m2!1sen!2sng"
-            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <!-- End Map -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Tiqwa Care</h3>
-                        <p>
-                            9, Ibikunle Street <br> Off Herbert Macauly way<br> Yaba, Lagos State, Nigeria <br><br>
-                            <strong>Phone:</strong> +234 813 948 8344<br>
-                            <strong>Email:</strong> tiqwa_care@outlook.com<br>
-                        </p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#about">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#services">Services</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#gallery">Media</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="index.html#department">Department</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Services</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Cardiology</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Clinical Radiology</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Optometry</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Paedatry</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Dentistry</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Join Our Newsletter</h4>
-                        <!-- <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p> -->
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-
-                </div>
             </div>
+        </section>
+        <!-- End Appointment Section -->
+
+        <!-- Map -->
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3964.065510751154!2d3.3751999!3d6.5133926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c5825e0cae5%3A0x335eb0de32ede372!2s9%20Ibikunle%20St%2C%20Yaba%20101245%2C%20Lagos!5e0!3m2!1sen!2sng!4v1655650297513!5m2!1sen!2sng" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <div class="container d-md-flex py-4">
+        <!-- End Map -->
 
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>Olucrespo Services Limited</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                    Designed by <a href="">Olucrespo</a>
+        <!-- Footer -->
+        <footer id="footer">
+
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+    
+                        <div class="col-lg-3 col-md-6 footer-contact">
+                            <h3>Tiqwa Care</h3>
+                            <p>
+                                9, Ibikunle Street <br> Off Herbert Macauly way<br> Yaba, Lagos State, Nigeria <br><br>
+                                <strong>Phone:</strong> +234 813 948 8344<br>
+                                <strong>Email:</strong> tiqwa_care@outlook.com<br>
+                            </p>
+                        </div>
+    
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 footer-newsletter">
+                            <h4>Join Our Newsletter</h4>
+                            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                            <form action="" method="post">
+                                <input type="email" name="email"><input type="submit" value="Subscribe">
+                            </form>
+                        </div>
+    
+                    </div>
                 </div>
             </div>
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    
+            <div class="container d-md-flex py-4">
+    
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Olucrespo Services Limited</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        Designed by <a href="">Olucrespo</a>
+                    </div>
+                </div>
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
             </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
+        </footer>
+        <!-- End Footer -->
 
 
 
@@ -296,62 +329,52 @@
     <script src="assets/js/main.js"></script>
 
 
-<!--
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        $("#btn_submit").click(function() {
-
-            var fullname = $("#fullname").val();
-            var email = $("#email").val();
-            var phone = $("#phone").val();
-            var gender = $("#gender").val();
-            var dob = $("#dob").val();
-            var location = $("#location").val();
-            var unit = $("#unit").val();
-            var appointmentdate = $("#appointmentdate").val();
-            var message = $("#message").val()
-
-            if (fullname == "" || email == "" || phone == "" || gender == "" || dob == "" || location == "" || unit =="" || appointmentdate == "") {
-                swal({
-                    title: "Field(s) Empty!",
-                    text: "Please check the missing field!",
-                    icon: "warning",
-                    button: "Ok",
+        $(function() {
+            $("#btn_submit").click(function(e) {
+                e.preventDefault();
+                var formData = {
+                    fullname: $("#fullname").val(),
+                    email: $("#email").val(),
+                    phone: $("#phone").val(),
+                    gender: $("#gender").val(),
+                    dob: $("#dob").val(),
+                    location: $("#location").val(),
+                    unit: $("#unit").val(),
+                    appointmentdate: $("#appointmentdate").val(),                    
+                    message: $("#message").val()
+                }
+                $.ajax({
+                    contentType: 'application/json',
+                    type: "POST",
+                    url: "https://prod-240.westeurope.logic.azure.com/workflows/f5abd6ce29a246b1bf964dbba245645a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=h6gbicLtcgElUufuhc7WH30Umkpjqi220gUpq-SwO4Q",
+                    data: JSON.stringify(formData),
+                    success: function() {
+                        $("#postResult").text("Your appointment request has been sent successfully. Thank you!");
+                        $("#fullname").val(""),
+                        $("#email").val(""),
+                        $("#phone").val(""),
+                        $("#gender").val(""),
+                        $("#dob").val(""),
+                        $("#location").val(""),
+                        $("#unit").val(""),
+                        $("#appointmentdate").val(""),                    
+                        $("#message").val("")
+                    },
+                    error: function() {
+                        $("#postResult").text("Failed");
+                    }
                 });
-            } else {
-                swal({
-                    title: "Success!",
-                    text: "Appointment Successfully Submitted!",
-                    icon: "success",
-                    button: "Ok",
-                });
-            }
-
-
-            $.ajax({
-                contentType: 'application/json',
-                type: "POST",
-                url: "https://prod-240.westeurope.logic.azure.com/workflows/f5abd6ce29a246b1bf964dbba245645a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=h6gbicLtcgElUufuhc7WH30Umkpjqi220gUpq-SwO4Q",
-                data: JSON.stringify(formData),
-                // success: function() {
-                //     $("#postResult").val("Success");
-                // },
-                // error: function() {
-                //     $("#postResult").val("Failed");
-                // }
             });
         });
     </script>
 
-
--->
-
-    <!--Script to limit the date and also set default-->
+<!--Script to limit the date and also set default-->
     <script>
         var date = new Date();
         var tdate = date.getDate();
-        if (tdate < 10) {
+        if(tdate < 10) {
             tdate = '0' + tdate;
         }
         var month = date.getMonth() + 1;
@@ -361,42 +384,10 @@
         var year = date.getFullYear();
         var minDate = year + '-' + month + '-' + tdate;
         document.getElementById('appointmentdate').setAttribute('min', minDate)
-        document.getElementById('appointmentdate').value = minDate;
-    </script>
+        document.getElementById('appointmentdate').value= minDate
+    </script>    
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <!-- <script>
-        $("#btn_submit").click(function() {
-            var name = $("#fullname").val();
-            var name = $("#email").val();
-            var name = $("#phone").val();
-            var name = $("#dob").val();
-            var name = $("#location").val();
-
-            if (fullname == "" || email == "" || phone == "" || dob == "" || location == "") {
-                swal({
-                    title: "Field(s) Empty!",
-                    text: "Please check the missing field!",
-                    icon: "warning",
-                    button: "Ok",
-                });
-            } else {
-                swal({
-                    title: "Success!",
-                    text: "Appointment Successfully Submitted!",
-                    icon: "success",
-                    button: "Ok",
-                });
-            }
-        })
-    </script> -->
-
-
-
-
-
-    <!-- 
+<!-- 
     <script>
         let popup =document.getElementById(popup);
 
