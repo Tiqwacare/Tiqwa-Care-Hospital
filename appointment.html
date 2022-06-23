@@ -102,7 +102,7 @@
 
                     <div class="col-md-4 form-group mt-3 mt-md-0">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" pattern="[0-9]{11} required>
                         <div class="validate"></div>
                     </div>
                 </div>
@@ -311,7 +311,7 @@
             var appointmentdate = $("#appointmentdate").val();
             var message = $("#message").val()
 
-            if (fullname == "" || email == "" || phone == "" || gender == "" || dob == "" || location == "" || appointmentdate == "") {
+            if (fullname == "" || email == "" || phone == "" || gender == "" || dob == "" || location == "" || unit =="" || appointmentdate == "") {
                 swal({
                     title: "Field(s) Empty!",
                     text: "Please check the missing field!",
