@@ -323,8 +323,20 @@
     <script src="assets/js/main.js"></script>
 
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
+        let prevVal = "";
+        document.getElementById('phone').addEventListener('input', function(e) {
+            if(/[\d]/.test(this.value)) {
+                prevVal = this.value;
+            } else{
+                this.value = prevVal;
+            }
+        })
+
+        
+
         $(function() {
             $("#btn_submit").click(function(e) {
                 e.preventDefault();
@@ -339,7 +351,20 @@
                     appointmentdate: $("#appointmentdate").val(),                    
                     message: $("#message").val()
                 }
-                $.ajax({
+
+                
+
+                if ($("#fullname").val() == "" || $("#email").val() == "" || $("#phone").val() == "" || $("#gender").val() == "" || 
+                    $("#dob").val() == "" || $("#location").val() == "" || $("#unit").val() =="" ||$("#appointmentdate").val() == "" ) {
+                        swal({
+                    title: "Field(s) Empty!",
+                    text: "Please check the missing field!",
+                    icon: "warning",
+                    button: "Ok",
+                });
+                } else {
+
+                    $.ajax({
                     contentType: 'application/json',
                     type: "POST",
                     url: "https://prod-240.westeurope.logic.azure.com/workflows/f5abd6ce29a246b1bf964dbba245645a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=h6gbicLtcgElUufuhc7WH30Umkpjqi220gUpq-SwO4Q",
@@ -360,9 +385,22 @@
                         $("#postResult").text("Failed");
                     }
                 });
+
+                    swal({
+                        title: "Success!",
+                        text: "Appointment Successfully Submitted!",
+                        icon: "success",
+                        button: "Ok",
+                    });
+
+                }
             });
         });
     </script>
+
+
+    
+
 
 <!--Script to limit the date and also set default-->
     <script>
