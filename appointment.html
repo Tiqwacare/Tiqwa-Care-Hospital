@@ -110,14 +110,12 @@
                     <div class="row">
                         <div class="col-md-4 form-group">
                             <label for="name">Fullname</label>
-                            <input type="text" name="name" class="form-control" id="fullname" placeholder="Surname First" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
-                            <div class="validate"></div>
+                            <input type="text" name="name" class="form-control" id="fullname" placeholder="Surname First" required>
                         </div>
 
                         <div class="col-md-4 form-group mt-3 mt-md-0">
                             <label for="email">E-mail</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email" data-rule="email" data-msg="Please enter a valid email" required>
-                            <div class="validate"></div>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your valid email" data-rule="email" data-msg="Please enter a valid email" required>
                         </div>
 
                         <div class="col-md-4 form-group mt-3 mt-md-0">
@@ -129,70 +127,63 @@
 
                     <div class="row">
                         <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <label for="gender">Gender</label>
-                            <select name="gender" id="gender" class="form-select">
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender" class="form-select" required>
                               <option value="">Select Gender</option>
                               <option value="Female">Male</option>
                               <option value="Male">Female</option>
                             </select>
-                            <div class="validate"></div>
-                        </div>
+                        <div class="validate"></div>
+                    </div>
 
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <label for="dob">Date of Birth</label>
-                            <input type="date" name="dob" class="form-control datepicker" id="dob" placeholder="Date of Birth" data-rule="minlen:4" data-msg="Please pick a date from calendar" required>
-                            <div class="validate"></div>
-                        </div>
-
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <label for="location">Location</label>
-                            <select name="location" id="location" class="form-select" required>
-                              <option value="">Select Location</option>
-                              <option value="Agege">Agege</option>
-                              <option value="Alimosho">Alimosho</option>
-                              <option value="Apapa">Apapa</option>
-                              <option value="Ifako-Ijaye">Ifako-Ijaye</option>
-                              <option value="Ikeja">Ikeja</option>
-                              <option value="Kosofe">Kosofe</option>
-                              <option value="Mushin">Mushin</option>
-                              <option value="Oshodi-Isolo">Oshodi-Isolo</option>
-                              <option value="Shomolu">Shomolu</option>
-                              <option value="Eti-Osa">Eti-Osa</option>
-                              <option value="Lagos Island">Lagos Island</option>
-                              <option value="Lagos Mainland">Lagos Mainland</option>
-                              <option value="Surulere">Surulere</option>
-                              <option value="Ojo">Ojo</option>
-                              <option value="Ajeromi-Ifelodun">Ajeromi-Ifelodun</option>
-                              <option value="Amuwo-Odofin">Amuwo-Odofin</option>
-                              <option value="Badagry">Badagry</option>
-                              <option value="Ikorodu">Ikorodu</option>
-                              <option value="Ibeju-Lekki">Ibeju-Lekki</option>
-                              <option value="Epe">Epe</option>
-                            </select>
-                            <div class="validate"></div>
-                        </div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="dob" class="form-control datepicker" id="dob" placeholder="Date of Birth" data-rule="minlen:6" data-msg="Please pick a date from calendar" required>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <label for="location">Location</label>
+                        <select name="location" id="location" class="form-select" required>
+                          <option value="">Select Location</option>
+                          <option value="Agege">Agege</option>
+                          <option value="Alimosho">Alimosho</option>
+                          <option value="Apapa">Apapa</option>
+                          <option value="Ifako-Ijaye">Ifako-Ijaye</option>
+                          <option value="Ikeja">Ikeja</option>
+                          <option value="Kosofe">Kosofe</option>
+                          <option value="Mushin">Mushin</option>
+                          <option value="Oshodi-Isolo">Oshodi-Isolo</option>
+                          <option value="Shomolu">Shomolu</option>
+                          <option value="Eti-Osa">Eti-Osa</option>
+                          <option value="Lagos Island">Lagos Island</option>
+                          <option value="Lagos Mainland">Lagos Mainland</option>
+                          <option value="Surulere">Surulere</option>
+                          <option value="Ojo">Ojo</option>
+                          <option value="Ajeromi-Ifelodun">Ajeromi-Ifelodun</option>
+                          <option value="Amuwo-Odofin">Amuwo-Odofin</option>
+                          <option value="Badagry">Badagry</option>
+                          <option value="Ikorodu">Ikorodu</option>
+                          <option value="Ibeju-Lekki">Ibeju-Lekki</option>
+                          <option value="Epe">Epe</option>
+                        </select>
+                        <div class="validate"></div>
+                    </div>
                     </div> 
                     
                     <div class="row">
                         <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <label for="department">Unit</label>
-                            <select name="department" id="unit" class="form-select" required>
-                              <option value="">Select Department</option>
-                              <option value="Doctor">Choose for me</option>
-                              <option value="Cardiologist">Cardiology</option>
-                              <option value="Radiologist">Clinical Radiology</option>
-                              <option value="Dentist">Dentistry</option>
-                              <option value="Gynaecologist">Gynaecology</option>
-                              <option value="Ophthalmologist">Ophthalmology</option>
-                              <option value="Optometrist">Optometry</option>
-                              <option value="Paediatrician">Paediatry</option>
-                              <option value="Pathologist">Pathology</option>
-                              <option value="Physiotherapist">Physiotheraphy</option>
-                              <option value="Psychiatrist">Psychiatry</option>
-                              <option value="Surgeon">Surgery</option>
+                        <label for="department">Unit</label>
+                        <select name="department" id="unit" placeholder="Select(Option)" class="form-select" required>
+                              <option value="">Select (Optional)</option>
+                              <option value="Dentistry">Dentistry</option>
+                              <option value="Gynaecology">Gynaecology</option>
+                              <option value="Ophthalmology">Ophthalmology</option>
+                              <option value="Paediatry">Paediatry</option>
+                              <option value="Physiotheraphy">Physiotheraphy</option>
+                              <option value="GOP">Choose for me</option>
                             </select>
-                            <div class="validate"></div>
-                        </div>
+                        <div class="validate"></div>
+                    </div>
 
                         <div class="col-md-4 form-group mt-3 mt-md-0">
                             <label for="appointment">Appointment Date </label>
@@ -207,6 +198,7 @@
                         <textarea class="form-control" name="message" id="message" rows="5" placeholder="Further Description of the symptoms (Optional)" required></textarea>
                         <div class="validate"></div>
                     </div>
+                    </br>
 
                     <div class="text-center"><button  id="btn_submit" type="submit" onclick="openPopup">Make an Appointment</button></div>
 
@@ -216,19 +208,20 @@
                         </button>
                     </div> -->
 
-                    <!-- <div class="popup">
+               <!-- <div class="popup">
                         <img src="/Medilab/assets/img/404-tick.png">
                         <h2>Thanks you!</h2>
                         <p>Your appointment request has been sent successfully.  </p>
                     </div>
                     <button type="button" onclick="closePopup">OK</button>
- -->
+                -->
 
-                    <!-- <div class="mb-3" id="postResult" type="text" value="Empty" >
+                <!-- <div class="mb-3" id="postResult" type="text" value="Empty" >
                         <div class="loading">Loading</div>
                         <div class="error-message"></div>
                         <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-                    </div>  -->
+                    </div>  
+                -->
 
                 </form>
 
