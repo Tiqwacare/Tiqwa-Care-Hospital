@@ -30,34 +30,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
    
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script>
-        $(function() {
-            $("#btn_submit").click(function() {
-                var formData = {
-                    fullname: $("#fullname").val(),
-                    departments: $("#departments").val(),
-                    email: $("#email").val(),
-                    mobilenumber: $("#mobilenumber").val(),
-                    location: $("#location").val(),
-                    date: $("#date").val(),
-                    message: $("#message").val()
-                }
-                $.ajax({
-                    contentType: 'application/json',
-                    type: "POST",
-                    url: "https://prod-147.westeurope.logic.azure.com:443/workflows/35e061310f26455caa14ac4e7391dd03/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=DbLexd7HslW9BZhLP_LsFlrZzXdVKF7GGy_GgZx3bCc",
-                    data: JSON.stringify(formData),
-                    success: function() {
-                        $("#postResult").val("Success");
-                    },
-                    error: function() {
-                        $("#postResult").val("Failed");
-                    }
-                });
-            });
-        });
-    </script>
+    
 
 </head>
 
