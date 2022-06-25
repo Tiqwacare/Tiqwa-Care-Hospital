@@ -501,7 +501,7 @@ h6 {
 }
 
 #hero h2 {
-    color: #3e4095;
+    color: #ed3237;
     margin: 10px 0 0 0;
     font-size: 24px;
 }
@@ -790,7 +790,7 @@ section {
 }
 
 .about .img-box {
-    background: url("../img/doctor.jpg") center center no-repeat;
+    background: url("../img/aboutus.jpeg") center center no-repeat;
     background-size: cover;
     min-height: 500px;
 }
