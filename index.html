@@ -36,7 +36,7 @@
     <div id="topbar" class="d-flex align-items-center fixed-top">
         <div class="container d-flex justify-content-between">
             <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope"></i> <a href="mailto:tiqwa_care@outlook.com">tiqwa_care@outlook.com</a>
+                <i class="bi bi-envelope"></i> <a href="mailto:enquiries@tiqwacare.onmicrosoft.com">tiqwa_care@outlook.com</a>
                 <i class="bi bi-phone"></i> <a href="https://wa.me/+2348057820125">+234 813 9488 344 </a>
             </div>
             <div class="d-none d-lg-flex social-links align-items-center">
@@ -594,9 +594,9 @@
                         <div class="swiper-slide">
                             <div class="testimonial-wrap">
                                 <div class="testimonial-item">
-                                    <img src="assets/img/Azeez.jpg" class="testimonial-img" alt="">
-                                    <h3>Fijabi</h3>
-                                    <h4>Ceo &amp; Founder</h4>
+                                    <img src="assets/img/az.png" class="testimonial-img" alt="">
+                                    <h3>Okunade Azeez</h3>
+                                    <h4>Ceo &amp; Blossom Heart</h4>
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i> The services that I receive from Tiqwa Care Hospital is excellent. The doctors and other members of the staff are friendly and ensure that I am properly informed
                                         about my health and care. I would have no problem in recommending them to family and friends.
@@ -805,7 +805,7 @@
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email:</h4>
-                                <p>tiqwa_care@outlook.com</p>
+                                <p>enquiries@tiqwacare.onmicrosoft.com</p>
                             </div>
 
                             <div class="phone">
@@ -818,29 +818,40 @@
 
                     </div>
 
+                    <!-- Feedback / Contact form Section -->
                     <div class="col-lg-8 mt-5 mt-lg-0">
 
                         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                             <div class="row">
+
                                 <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                    <label for="name">Fullname</label>
+                                    <input type="text" name="name" class="form-control" id="fullname" placeholder="Surname First" required>
                                 </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label for="name"> Patient ID</label>
+                                    <input type="text" name="patientID" id="patientID" class="form-control" placeholder="Your Name" required>
+                                </div>
+
                                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                    <label for="review">Review</label>
+                                    <select name="review" id="review" class="form-select" required>
+                                      <option value="">Choose one</option>
+                                      <option value="verySatisfied">Very Satisfied</option>
+                                      <option value="satisfied">Satisfied</option>
+                                      <option value="notSatisfied">Not Satisfied</option>
+                                    </select>
                                 </div>
                             </div>
+
                             <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
                             </div>
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
+                            </br>
+
+                            <div class="text-center"><button type="submit">Submit</button></div>
                         </form>
 
                     </div>
