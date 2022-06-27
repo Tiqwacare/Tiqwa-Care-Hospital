@@ -115,12 +115,12 @@
 
                         <div class="col-md-4 form-group mt-3 mt-md-0">
                             <label for="email">E-mail</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your valid email" data-rule="email" data-msg="Please enter a valid email" required>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your valid Email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
                         </div>
 
                         <div class="col-md-4 form-group mt-3 mt-md-0">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" name="phone" id="phone" data-rule="" placeholder="Phone Number" data-rule="minlen:10" data-msg="Please enter at least 10 chars" required>
+                            <input type="tel" class="form-control" name="phone" id="phone" data-rule="" placeholder="Phone Number" minlength="11" maxlength="11" required>
                             <div class="validate"></div>
                         </div>
                     </div>
