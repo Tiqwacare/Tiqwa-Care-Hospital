@@ -481,7 +481,7 @@ h6 {
 #hero {
     width: 100%;
     height: 90vh;
-    background: url("../img/fontpage.jpg") top center;
+    background: url("../img/heroimage.png") top center;
     background-size: cover;
     margin-bottom: -200px;
 }
@@ -497,11 +497,11 @@ h6 {
     font-weight: 700;
     line-height: 56px;
     text-transform: uppercase;
-    color: #3e4095;
+    color: whitesmoke;
 }
 
 #hero h2 {
-    color: #ed3237;
+    color: whitesmoke;
     margin: 10px 0 0 0;
     font-size: 24px;
 }
@@ -544,7 +544,7 @@ h6 {
 #herohero {
     width: 100%;
     height: 90vh;
-    background: url("../img/fontpage.jpg") top center;
+    background: url("../img/heroimage.png") top center;
     background-size: cover;
     margin-bottom: -200px;
 }
@@ -560,7 +560,7 @@ h6 {
     font-weight: 700;
     line-height: 56px;
     text-transform: uppercase;
-    color: #3e4095;
+    color: whitesmoke;
 }
 
 #herohero p {
