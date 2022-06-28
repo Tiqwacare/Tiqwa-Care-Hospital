@@ -120,7 +120,7 @@
 
                         <div class="col-md-4 form-group mt-3 mt-md-0">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" name="phone" id="phone" data-rule="" placeholder="Phone Number" minlength="11" maxlength="11" required>
+                            <input type="tel" class="form-control" name="phone" id="phone" data-rule="" placeholder="Phone Number" maxlength="11" required>
                             <div class="validate"></div>
                         </div>
                     </div>
@@ -365,7 +365,7 @@
                     $.ajax({
                     contentType: 'application/json',
                     type: "POST",
-                    url: "https://prod-240.westeurope.logic.azure.com/workflows/f5abd6ce29a246b1bf964dbba245645a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=h6gbicLtcgElUufuhc7WH30Umkpjqi220gUpq-SwO4Q",
+                    url: "https://prod-188.westeurope.logic.azure.com/workflows/46efda65158a475c8bd34b7ace0ccf19/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hqfE5U3OK6jG_hX-cF1dvLTK8osQgNSC4dTz-DvqrXc",
                     data: JSON.stringify(formData),
                     success: function() {
                         $("#postResult").text("Your appointment request has been sent successfully. Thank you!");
