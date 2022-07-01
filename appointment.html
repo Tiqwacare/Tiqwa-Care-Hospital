@@ -11,21 +11,13 @@
 
     <!-- Favicons -->
     <link href="assets/img/tiqwa.png" rel="icon">
-    <link href="assets/img/tiqwa.png" rel="apple-touch-icon">
     <script src="https://kit.fontawesome.com/4070cef90d.js" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-<!--     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
-<!--     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"> -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!--     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
-<!--     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> -->
-<!--     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
-<!--     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet"> -->
-<!--     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -38,7 +30,7 @@
     <div id="topbar" class="d-flex align-items-center fixed-top">
         <div class="container d-flex justify-content-between">
             <div class="contact-info d-flex align-items-center">
-                <i class="fa fa-envelope"></i> <a href="mailto:enquiries@tiqwacare.onmicrosoft.com">enquiries@tiqwacare.onmicrosoft.com</a>
+                <i class="fa fa-envelope"></i> <a href="mailto:enquiries@tiqwacare.onmicrosoft.com">enquiries@tiqwacares.onmicrosoft.com</a>
                 <i class="fa fa-phone"></i> <a href="https://wa.me/+2348057820125">+234 805 7820 125 </a>
             </div>
             <div class="d-none d-lg-flex social-links align-items-center">
@@ -49,6 +41,7 @@
             </div>
         </div>
     </div>
+
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
@@ -59,7 +52,7 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="index.html#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-                    <li class="dropdown"><a class="nav-link scrollto" href="index.html#services">Services</a>  
+                    <li class="dropdown"><a class="nav-link scrollto" href="index.html#services">Services</a>
                         <ul class="nav nav-tabs flex-column">
                             <li class="nav-item">
                                 <a class="nav-link active show" data-bs-toggle="tab" href="index.html#tab-1">Cardiology</a>
@@ -89,7 +82,6 @@
             <!-- .navbar -->
 
             <a href="appointment.html" class="appointment-btn scrollto"> Make an Appointment </a>
-
         </div>
     </header>
     <!-- End Header -->
@@ -102,45 +94,43 @@
     </section>
     <!-- End Herohero -->
 
-   
+
     <!-- ======= Appointment Section ======= -->
-        <section id="appointment" class="appointment section-bg">
-            <div class="container">
-                <form action="appointment.html" method="post" role="form" class="php-email-form">
-                    <div class="row">
-                        <div class="col-md-4 form-group">
-                            <label for="name">Fullname</label>
-                            <input type="text" name="name" class="form-control" id="fullname" placeholder="Surname First" required>
-                        </div>
-
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <label for="email">E-mail</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your valid Email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
-                        </div>
-
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" name="phone" id="phone" data-rule="" placeholder="Phone Number" maxlength="11" required>
-                            <div class="validate"></div>
-                        </div>
+    <section id="appointment" class="appointment section-bg">
+        <div class="container">
+            <form action="appointment.html" method="post" role="form" class="php-email-form">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label for="name">Fullname</label>
+                        <input type="text" name="name" class="form-control" id="fullname" placeholder="Surname First" required>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your valid Email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
+                    </div>
+
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" pattern="[0-9]{11}" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
                         <label for="gender">Gender</label>
                         <select name="gender" id="gender" class="form-select" required>
                               <option value="">Select Gender</option>
-                              <option value="Female">Male</option>
-                              <option value="Male">Female</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
                             </select>
-                        <div class="validate"></div>
                     </div>
 
                     <div class="col-md-4 form-group mt-3 mt-md-0">
                         <label for="dob">Date of Birth</label>
-                        <input type="date" name="dob" class="form-control datepicker" id="dob" placeholder="Date of Birth" data-rule="minlen:6" data-msg="Please pick a date from calendar" required>
-                        <div class="validate"></div>
+                        <input type="date" name="dob" class="form-control datepicker" id="dob" required>
                     </div>
+
                     <div class="col-md-4 form-group mt-3 mt-md-0">
                         <label for="location">Location</label>
                         <select name="location" id="location" class="form-select" required>
@@ -166,12 +156,11 @@
                           <option value="Ibeju-Lekki">Ibeju-Lekki</option>
                           <option value="Epe">Epe</option>
                         </select>
-                        <div class="validate"></div>
                     </div>
-                    </div> 
-                    
-                    <div class="row">
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
                         <label for="department">Unit</label>
                         <select name="department" id="unit" placeholder="Select(Option)" class="form-select" required>
                               <option value="">Select (Option)</option>
@@ -182,73 +171,42 @@
                               <option value="Physiotheraphy">Physiotheraphy</option>
                               <option value="GOP">Choose for me</option>
                             </select>
-                        <div class="validate"></div>
                     </div>
 
-                        <div class="col-md-4 form-group mt-3 mt-md-0">
-                            <label for="appointment">Appointment Date </label>
-                            <input type="date" name="appointmentdate" class="form-control datepicker" id="appointmentdate" placeholder="Appointment Date" data-rule="minlen:4" min="" data-msg="Please pick a date from calendar" required>
-                            <div class="validate"></div>
-                        </div>
+                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                        <label for="appointment">Appointment Date </label>
+                        <input type="date" name="appointmentdate" class="form-control datepicker" id="appointmentdate" required>
                     </div>
+                </div>
 
 
-                    <div class="form-group mt-3">
-                        <label for="symptoms">Symptom Description</label>
-                        <textarea class="form-control" name="message" id="message" rows="5" placeholder="Further Description of the symptoms (Optional)" required></textarea>
-                        <div class="validate"></div>
-                    </div>
-                    </br>
+                <div class="form-group mt-3">
+                    <label for="symptoms">Symptom Description</label>
+                    <textarea class="form-control" name="message" id="message" rows="5" placeholder="Further Description of the symptoms (Optional)"></textarea>
+                </div>
+                </br>
 
-                    <div class="text-center"><button  id="btn_submit" type="submit" onclick="openPopup">Make an Appointment</button></div>
+                <div class="text-center">
+                    <button id="btn_submit" type="submit" onclick="openPopup">Make an Appointment</button>
+                </div>
+            </form>
 
-                    <!-- <div class="text-center">
-                        <button type="submit" class="btn" onclick="openPopup">
-                            Submit
-                        </button>
-                    </div> -->
-
-               <!-- <div class="popup">
-                        <img src="/Medilab/assets/img/404-tick.png">
-                        <h2>Thanks you!</h2>
-                        <p>Your appointment request has been sent successfully.  </p>
-                    </div>
-                    <button type="button" onclick="closePopup">OK</button>
-                -->
-
-                <!-- <div class="mb-3" id="postResult" type="text" value="Empty" >
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-                    </div>  
-                -->
-
-                </form>
-
-            </div>
-        </section>
-        <!-- End Appointment Section -->
-
-        <!-- Map -->
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3964.065510751154!2d3.3751999!3d6.5133926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c5825e0cae5%3A0x335eb0de32ede372!2s9%20Ibikunle%20St%2C%20Yaba%20101245%2C%20Lagos!5e0!3m2!1sen!2sng!4v1655650297513!5m2!1sen!2sng" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+    </section>
+    <!-- End Appointment Section -->
 
-        <!-- End Map -->
 
-        <!-- ======= Footer ======= -->
+    <!-- ======= Footer ======= -->
     <footer id="footer">
-
         <div class="footer-top">
             <div class="container">
                 <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
+                    <div class="col-lg-4 col-md-6 footer-contact">
                         <h3>Tiqwa Care</h3>
                         <p>
                             9, Ibikunle Street <br> Off Herbert Macauly way<br> Yaba, Lagos State, Nigeria <br><br>
-                            <strong>Phone:</strong> +234 813 948 8344<br>
-                            <strong>Email:</strong> enquiries@tiqwacare.onmicrosoft.com<br>
+                            <strong>Phone:</strong> +234 805 782 0125<br>
+                            <strong>Email:</strong> enquiries@tiqwacares.onmicrosoft.com<br>
                         </p>
                     </div>
 
@@ -274,8 +232,8 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                       <h4>Engage With us on Our Social Media Handles</h4>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Engage With us on Our Social Media Handles</h4>
 
                         <div class="social-links text-center text-md-center pt-3 pt-md-0">
                             <a href="#" class="twitter"><i class="fa fa-twitter-square"></i></a>
@@ -284,11 +242,6 @@
                             <a href="#" class="linkedin"><i class="fa fa-linkedin-square"></i></i></a>
                             <a href="#" class="google-plus"><i class="fa fa-skype"></i></a>
                         </div>
-
-                        <!-- <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p> -->
-                        <!-- <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form> -->
                     </div>
 
                 </div>
@@ -301,7 +254,7 @@
                 <div class="copyright">
                     &copy; Copyright <strong><span>Tiqwa Care developers Team</span></strong>. All Rights Reserved
                 </div>
-                
+
             </div>
         </div>
     </footer>
@@ -311,33 +264,18 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-circle-arrow-up"></i></a>
 
     <!-- Vendor JS Files -->
-<!--     <script src="assets/vendor/purecounter/purecounter.js"></script> -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
-
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
     <script>
-        let prevVal = "";
-        document.getElementById('phone').addEventListener('input', function(e) {
-            if(/[\d]/.test(this.value)) {
-                prevVal = this.value;
-            } else{
-                this.value = prevVal;
-            }
-        })
-
-        
-
         $(function() {
-            $("#btn_submit").click(function(e) {
-                e.preventDefault();
+            $("#btn_submit").click(function() {
+
                 var formData = {
                     fullname: $("#fullname").val(),
                     email: $("#email").val(),
@@ -346,65 +284,57 @@
                     dob: $("#dob").val(),
                     location: $("#location").val(),
                     unit: $("#unit").val(),
-                    appointmentdate: $("#appointmentdate").val(),                    
+                    appointmentdate: $("#appointmentdate").val(),
                     message: $("#message").val()
                 }
 
-                
-
-                if ($("#fullname").val() == "" || $("#email").val() == "" || $("#phone").val() == "" || $("#gender").val() == "" || 
-                    $("#dob").val() == "" || $("#location").val() == "" || $("#unit").val() =="" ||$("#appointmentdate").val() == "" ) {
-                        swal({
-                    title: "Field(s) Empty!",
-                    text: "Please check the missing field!",
-                    icon: "warning",
-                    button: "Ok",
-                });
+                if ($("#fullname").val() == "" || $("#email").val() == "" || $("#phone").val() == "" || $("#gender").val() == "" ||
+                    $("#dob").val() == "" || $("#location").val() == "" || $("#unit").val() == "" || $("#appointmentdate").val() == "") {
+                    swal({
+                        title: "Field(s) Empty!",
+                        text: "Please check the missing field!",
+                        icon: "warning",
+                        button: "Ok",
+                    });
                 } else {
 
                     $.ajax({
-                    contentType: 'application/json',
-                    type: "POST",
-                    url: "https://prod-23.westeurope.logic.azure.com:443/workflows/2e24de8ada3941f094f0607abaa17307/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OG8TwKnPcC4V2zftbu8HW4bJtBr_STV9X0NhjFrG4fM",
-                    data: JSON.stringify(formData),
-                    success: function() {
-                        $("#postResult").text("Your appointment request has been sent successfully. Thank you!");
-                        $("#fullname").val(""),
-                        $("#email").val(""),
-                        $("#phone").val(""),
-                        $("#gender").val(""),
-                        $("#dob").val(""),
-                        $("#location").val(""),
-                        $("#unit").val(""),
-                        $("#appointmentdate").val(""),                    
-                        $("#message").val("")
-                    },
-                    error: function() {
-                        $("#postResult").text("Failed");
-                    }
-                });
+                        contentType: 'application/json',
+                        type: "POST",
+                        url: "https://prod-23.westeurope.logic.azure.com:443/workflows/2e24de8ada3941f094f0607abaa17307/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OG8TwKnPcC4V2zftbu8HW4bJtBr_STV9X0NhjFrG4fM",
+                        data: JSON.stringify(formData),
+                        success: swal({
+                            title: "Success!",
+                            text: "Appointment Successfully Submitted!",
+                            icon: "success",
+                            button: "Ok",
+                        }),
+                        function() {
+                            $("#postResult").text("Your appointment request has been sent successfully. Thank you!");
+                            $("#fullname").val(""),
+                                $("#email").val(""),
+                                $("#phone").val(""),
+                                $("#gender").val(""),
+                                $("#dob").val(""),
+                                $("#location").val(""),
+                                $("#unit").val(""),
+                                $("#appointmentdate").val(""),
+                                $("#message").val("")
+                        }
 
-                    swal({
-                        title: "Success!",
-                        text: "Appointment Successfully Submitted!",
-                        icon: "success",
-                        button: "Ok",
                     });
-
                 }
             });
+
         });
     </script>
 
 
-    
-
-
-<!--Script to limit the date and also set default-->
+    <!--Script to limit the date and also set default-->
     <script>
         var date = new Date();
         var tdate = date.getDate();
-        if(tdate < 10) {
+        if (tdate < 10) {
             tdate = '0' + tdate;
         }
         var month = date.getMonth() + 1;
@@ -414,7 +344,7 @@
         var year = date.getFullYear();
         var minDate = year + '-' + month + '-' + tdate;
         document.getElementById('appointmentdate').setAttribute('min', minDate)
-        document.getElementById('appointmentdate').value= minDate
+        document.getElementById('appointmentdate').value = minDate
     </script>
 
 </body>
